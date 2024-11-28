@@ -20,7 +20,7 @@
 - `pip` (Python 패키지 관리자)
 
 ### **필수 라이브러리 설치**  
-터미널을 열고 다음 명령어를 실행하여 필요한 라이브러리를 설치하세요:
+터미널을 열고 다음 명령어를 실행하여 필요한 라이브러리를 설치해야 합니다
 ```bash
 pip install flask numpy flask_cors pandas scikit-learn openpyxl
 ```
@@ -28,8 +28,8 @@ pip install flask numpy flask_cors pandas scikit-learn openpyxl
 
 ## **앱 실행 방법**  
 1. 사용하려는 포트 번호가 `5000`인지 확인합니다.  
-   - 만약 `5000`번 포트를 사용할 수 없다면, `app.py` 파일에서 포트 번호를 변경하세요.  
-2. 터미널에서 다음 명령어를 실행하여 프로그램을 시작합니다:  
+   - 만약 `5000`번 포트를 사용할 수 없다면, `app.py` 파일에서 포트 번호를 변경해야 합니다.
+2. 터미널에서 다음 명령어를 실행하여 프로그램을 시작합니다
    ```bash
    python app.py
    ```
