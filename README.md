@@ -5,6 +5,7 @@
 > 데이터셋은 직접 크롤링하여 전처리 및 데이터 분석 과정을 거쳐 사용되었습니다.
 
 > 프론트엔드 : https://github.com/jaaesung/DaeguHang/tree/yoonagi1210
+
 > 백엔드 : https://github.com/brothergiven/daeguhaeng_backend/tree/master
 ---
 
