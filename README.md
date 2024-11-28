@@ -4,6 +4,8 @@
 > **주의**: 이 프로젝트는 **프론트엔드**, **백엔드**, **AI**가 각각 분리된 구조로 개발되었습니다.  
 > 데이터셋은 직접 크롤링하여 전처리 및 데이터 분석 과정을 거쳐 사용되었습니다.
 
+> 프론트엔드 : https://github.com/jaaesung/DaeguHang/tree/yoonagi1210
+> 백엔드 : https://github.com/brothergiven/daeguhaeng_backend/tree/master
 ---
 
 ## **프로젝트 개요**  
