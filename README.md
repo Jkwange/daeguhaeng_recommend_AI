@@ -32,7 +32,7 @@ pip install flask numpy flask_cors pandas scikit-learn openpyxl
 2. 터미널에서 다음 명령어를 실행하여 프로그램을 시작합니다:  
    ```bash
    python app.py
-
+   ```
 
 
 ## 프로젝트 구조
