@@ -34,10 +34,14 @@ pip install flask numpy flask_cors pandas scikit-learn openpyxl
    python app.py
    ```
 
+---
 
-## 프로젝트 구조
-daeguhaeng_recommend_AI/
-├── app.py                # 백엔드 API (Flask 기반)
-├── mnt/                 # 데이터셋 디렉토리
-  ├── data/               # 데이터셋 집합
-└── README.md             # 프로젝트 설명서
+## **프로젝트 구조**
+```plaintext
+daeguhaeng_AI/
+├── .vscode/             # VSCode 설정 파일 디렉토리
+│   └── settings.json    # 프로젝트 관련 설정 파일
+├── mnt/                 # 데이터 디렉토리
+│   └── data/            # 데이터 파일 저장소
+├── app.py               # Flask 기반의 백엔드 애플리케이션
+└── README.md            # 프로젝트 설명서
