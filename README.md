@@ -23,9 +23,7 @@
 터미널을 열고 다음 명령어를 실행하여 필요한 라이브러리를 설치하세요:
 ```bash
 pip install flask numpy flask_cors pandas scikit-learn openpyxl
-
 ```
-
 ---
 
 ## **앱 실행 방법**  
