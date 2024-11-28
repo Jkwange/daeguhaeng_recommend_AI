@@ -1,4 +1,4 @@
-# **대구행 추천 AI (DaeguHaeng Recommend AI)**  
+# **대구 관광지 추천 AI (대구행, DaeguHaeng Recommend AI)**  
 관광지 추천 AI 플랫폼
 
 > **주의**: 이 프로젝트는 **프론트엔드**, **백엔드**, **AI**가 각각 분리된 구조로 개발되었습니다.  
