@@ -121,6 +121,8 @@ def map_age_range(age_input):
     else:
         return 60
 
+
+
 @app.route('/api/recommend', methods=['POST'])
 def recommend():
     try:
@@ -133,17 +135,11 @@ def recommend():
         gender = user_data.get('gender')
         spending = user_data.get('spending')
 
+
         # 클러스터와 나이 값 검증
         if cluster not in cluster_data or age < 0 or age > 120:
             return jsonify({"error": "입력 값이 비정상적입니다."}), 400
 
-        # 성별 값 변환 ('여' -> 'F', '남' -> 'M')
-        if gender == "여":
-            gender = "F"
-        elif gender == "남":
-            gender = "M"
-        else:
-            return jsonify({"error": "성별 값은 '여' 또는 '남'이어야 합니다."}), 400
 
         # 나이대 변환
         age_group = map_age_range(age)
@@ -165,6 +161,7 @@ def recommend():
         ].reset_index()
 
         filtered_card_data_성별연령별.columns = ["소비관광지역명칭", "소비벡터"]
+
 
         # Step 1: 사용자 소비 벡터화
         user_vector = np.array([
@@ -203,9 +200,13 @@ def recommend():
             how="inner"
         )
 
+
         final_output = final_result[[
-            "분류", "관광지", "가맹점명", "유사도"#, "가게 이미지 URL", "별점", "리뷰 수", "주소", "웹사이트 URL", "위치값 주소", "위도", "경도", "유사도"
+            "ID", "분류", "관광지", "가맹점명", "가게 이미지 URL", "별점", "리뷰 수", "주소", "웹사이트 URL", "위치값 주소", "위도", "경도", "유사도"
         ]].sort_values(by="유사도", ascending=False)
+
+
+
 
         response = final_output.to_dict(orient='records')
         print(f"[RESPONSE SENT] 응답 데이터: {response}")
