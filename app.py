@@ -28,11 +28,11 @@ def favicon():
 # 파일 경로 설정
 base_dir = os.path.dirname(os.path.abspath(__file__))
 card_data_path = os.path.join(base_dir, 'mnt/data/데이터 카드1234.xlsx')
-cluster_paths = {i: os.path.join(base_dir, f'mnt/data/cluster_{i}.xlsx') for i in [0, 1, 2, 4]}
+cluster_paths = {i: os.path.join(base_dir, f'mnt/data/encoding_cluster_{i}.csv') for i in [0, 1, 2, 3]}
 
 try:
     card_df = pd.read_excel(card_data_path, engine='openpyxl')
-    cluster_data = {key: pd.read_excel(path, engine='openpyxl') for key, path in cluster_paths.items()}
+    cluster_data = {key: pd.read_csv(path, encoding='ANSI') for key, path in cluster_paths.items()}
 except FileNotFoundError as e:
     raise RuntimeError(f"필요한 파일이 없습니다: {e}")
 
@@ -202,7 +202,7 @@ def recommend():
 
 
         final_output = final_result[[
-            "ID", "분류", "관광지", "가맹점명", "가게 이미지 URL", "별점", "리뷰 수", "주소", "웹사이트 URL", "위치값 주소", "위도", "경도", "유사도"
+            "ID", "분류", "관광지", "가맹점명", "가게 이미지 URL", "별점", "리뷰 수", "주소", "위치값 주소", "위도", "경도", "유사도"
         ]].sort_values(by="유사도", ascending=False)
 
 
