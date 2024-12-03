@@ -32,7 +32,7 @@ cluster_paths = {i: os.path.join(base_dir, f'mnt/data/encoding_cluster_{i}.csv')
 
 try:
     card_df = pd.read_excel(card_data_path, engine='openpyxl')
-    cluster_data = {key: pd.read_csv(path, encoding='ANSI') for key, path in cluster_paths.items()}
+    cluster_data = {key: pd.read_csv(path, encoding='cp949') for key, path in cluster_paths.items()}
 except FileNotFoundError as e:
     raise RuntimeError(f"필요한 파일이 없습니다: {e}")
 
